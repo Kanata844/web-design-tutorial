@@ -1,9 +1,13 @@
 <script lang="ts">
-    import {resolve} from "$app/paths"
+    import {resolve} from "$app/paths";
+    import Body from "$lib/components/Body.svelte";
     import Header from "$lib/components/Header.svelte";
+    import Text from "./Text.svelte";
 </script>
 
 <Header/>
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="{resolve("/test")}">テストのページ</a> to read the documentation</p>
+<Body>
+    <Text/>
+</Body>
+
 
