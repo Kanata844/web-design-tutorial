@@ -1,20 +1,32 @@
 <script lang="ts">
-    let {menuDisplayed = $bindable()} = $props();
+    interface MenuList {
+    	title: string;
+    	url: string;
+    }
+    let {menuDisplayed = $bindable(), menuList}: {menuDisplayed: boolean, menuList?: MenuList[]} = $props();
 </script>
 
-<div class="container" style="left: {menuDisplayed? "0px": "-230px"}">
+<div class="container {menuDisplayed? "menuDisplayed": "menuHidden"}">
     <div class="list">
-        <p>おいだｓｊｇ</p>
-        <p>がおｊとえいｊ</p>
+        {#each menuList as item}
+        <p><a href={item.url}>{item.title}</a></p>
+        {/each}
     </div>
     <button class="button" onclick={()=>{menuDisplayed = !menuDisplayed}}>{menuDisplayed? "<": ">"}</button>
 </div>
 
 <style>
+    .menuDisplayed{
+        left: 0px;
+    }
+    .menuHidden{
+        left: -230px;
+    }
     .container{
         position: fixed;
         display: flex;
         justify-content: space-between;
+        margin-top: 5px;
         width: 250px;
         height: 100%;
         transition: 0.5s ease-out;
@@ -33,5 +45,14 @@
         font-size: 20px;
         margin-right: 0px;
         box-shadow: 2px 2px 4px gray;
+    }
+
+    @media screen and (max-width: 767px){
+        .container{
+            width: 220px;
+        }
+        .menuHidden{
+            left: -200px;
+        }
     }
 </style>

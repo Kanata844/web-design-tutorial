@@ -1,3 +1,7 @@
+<script>
+    import { resolve } from "$app/paths";
+
+</script>
 <div>
     <h1 style:margin-bottom="10px">はじめに</h1>
     <p style:margin-bottom="30px">このサイトは、GitHub Pagesに、作ったページをデプロイする方法を中心に解説します。</p>
@@ -8,7 +12,7 @@
     <p style:margin-bottom="15px">以下の3つの方法を紹介します。下に行けば行くほど内容は高度になりますが、順番はないので好きなものを選んでください。</p>
     <h2><a href="https://www.youtube.com">1.GitHubのソースコードを直接配信</a></h2>
     <h2><a href="https://www.youtube.com">2.ViteでTypeScriptで開発したものを配信</a></h2>
-    <h2 style:margin-bottom="15px"><a href="https://www.youtube.com">3.SvelteKitを用いて開発したものを配信</a></h2>
+    <h2 style:margin-bottom="15px"><a href={resolve("/sveltekit/page1")}>3.SvelteKitを用いて開発したものを配信</a></h2>
     <p>1.GitHubのソースコードを直接配信では、難しいことは一切せずにHTMLとCSSとJavaScriptで書いたページをとりあえず配信できればいいというときにおすすめです。が、解説することは少ないので1ページで終わると思います。</p>
     <p>2.ViteでTypeScriptで開発したものを配信では、少しレベルアップして便利に開発したいときにおすすめです。TypeScriptとは書いていますが、JavaScriptでも同じ事ができます。</p>
     <p>3.SvelteKitを用いて開発したものを配信では、最近勢いのあるフレームワークSvelteKitを使い、便利に開発していきます。新しく覚えることも多いですが、実務に一番近いですし便利な機能も多いので、チャレンジしてみて損はありません。</p>
@@ -20,5 +24,11 @@
     }
     a{
         color: tomato;
+    }
+    h1{
+        color: #33140e;
+    }
+    strong{
+        color: #33140e;
     }
 </style>
