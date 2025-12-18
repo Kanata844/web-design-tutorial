@@ -8,8 +8,8 @@
         <p class="title"><a href={resolve("/")}>作ったサイトを公開してみよう</a></p>
     </div>
     <div class="navigation-background">
-            <p><a href="">直接配信</a></p>
-            <p><a href="">Vite + TS</a></p>
+            <p><a href={resolve("/directly/page1")}>直接配信</a></p>
+            <p><a href={resolve("/vite-ts/page1")}>Vite + TS</a></p>
             <p><a href={resolve("/sveltekit/page1")}>SvelteKit</a></p>
     </div>
 </header>
@@ -31,7 +31,7 @@
         height: 65px;
     }
     .title a{
-        font-size: 3vw;
+        font-size: 40px;
         color: tomato;
         font-family: sans-serif;
         font-weight: bold;
@@ -53,10 +53,22 @@
         border-top: 1px solid #33140e;
         display: flex;
         justify-content: space-around;
+        align-items: center;
+        background-color: white;
     }
     .navigation-background a{
         font-size: 15px;
         color: #66281d;
         text-decoration: none;
+    }
+    @media screen and (max-width: 1279px){
+        .title a{
+            font-size: 30px;
+        }
+    }
+    @media screen and (max-width: 767px){
+        .title a{
+            font-size: 20px;
+        }
     }
 </style>

@@ -10,8 +10,8 @@
     <p style:margin-bottom="30px">注意点としては、<strong>サイトは1GB以内でないといけない</strong>こと、<strong>商用利用(広告も含む)が認められていない</strong>ことなどがあります。写真などを使うときは解像度を控えめにして容量を抑え、またお金儲けはしないようにしましょう。</p>
     <h1 style:margin-bottom="10px">本編</h1>
     <p style:margin-bottom="15px">以下の3つの方法を紹介します。下に行けば行くほど内容は高度になりますが、順番はないので好きなものを選んでください。</p>
-    <h2><a href="https://www.youtube.com">1.GitHubのソースコードを直接配信</a></h2>
-    <h2><a href="https://www.youtube.com">2.ViteでTypeScriptで開発したものを配信</a></h2>
+    <h2><a href={resolve("/directly/page1")}>1.GitHubのソースコードを直接配信</a></h2>
+    <h2><a href={resolve("/vite-ts/page1")}>2.ViteでTypeScriptで開発したものを配信</a></h2>
     <h2 style:margin-bottom="15px"><a href={resolve("/sveltekit/page1")}>3.SvelteKitを用いて開発したものを配信</a></h2>
     <p>1.GitHubのソースコードを直接配信では、難しいことは一切せずにHTMLとCSSとJavaScriptで書いたページをとりあえず配信できればいいというときにおすすめです。が、解説することは少ないので1ページで終わると思います。</p>
     <p>2.ViteでTypeScriptで開発したものを配信では、少しレベルアップして便利に開発したいときにおすすめです。TypeScriptとは書いていますが、JavaScriptでも同じ事ができます。</p>
