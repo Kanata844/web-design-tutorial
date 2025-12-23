@@ -4,7 +4,7 @@
 </script>
 <div>
     <h1 style:margin-bottom="10px">このサイトの概要</h1>
-    <p style:margin-bottom="30px">このサイトは、Webページをデザインし、それを公開する方法を見ていきます。GitHub Pagesで公開する方法と、Cloudflare Pagesで公開する方法を見ていくんじゃないかと思います。ut.code(); Learnで学んだことを活かして、ホームページ作成にチャレンジしてみましょう！</p>
+    <p style:margin-bottom="30px">このサイトは、Webページをデザインし、それを公開する方法を見ていきます。ut.code(); LearnではRenderにデプロイする方法が紹介されていましたが、ここではGitHub Pagesで公開する方法と、Cloudflare Pagesで公開する方法を見ていくんじゃないかと思います。ut.code(); Learnで学んだことを活かして、ホームページ作成にチャレンジしてみましょう！</p>
     <h2 style:margin-bottom="10px">GitHub Pagesとは</h2>
     <p>GitHub Pagesは、静的なWebサイトを無料でホスティングしてくれるサービスです。つまり、サーバー側の処理以外なら、Webページをタダで公開することができます。GitHubの個人アカウントか組織アカウントがあれば誰でもページを作成、公開できます。</p>
     <p style:margin-bottom="30px">注意点としては、ビルドは1時間に10回までなこと、<strong>サイトは1GB以内でないといけない</strong>こと、<strong>月100GBまでの帯域幅制限と月100000リクエストまでの制限がある</strong>こと、<strong>商用利用(広告も含む)が認められていない</strong>ことなどがあります。写真などを使うときは解像度を控えめにして容量を抑え、またお金儲けはしないようにしましょう。</p>

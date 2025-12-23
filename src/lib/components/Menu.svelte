@@ -1,9 +1,9 @@
 <script lang="ts">
-    interface MenuList {
+    interface MenuListItem {
     	title: string;
     	url: string;
     }
-    let {menuDisplayed = $bindable(), menuList}: {menuDisplayed: boolean, menuList?: MenuList[]} = $props();
+    let {menuDisplayed = $bindable(), menuList}: {menuDisplayed: boolean, menuList?: MenuListItem[]} = $props();
 </script>
 
 <div class="container {menuDisplayed? "menuDisplayed": "menuHidden"}">
