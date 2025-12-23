@@ -26,7 +26,7 @@
     .text{
         margin-top: 5px;
         transition: 0.5s ease-out;
-        width: 100%;
+        width: auto;
     }
     .menuDisplayed{
         margin-left: 255px;
