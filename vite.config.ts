@@ -4,6 +4,6 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [sveltekit()],
 	build: {
-		license: {fileName: "license.json"},
+		license: {fileName: "licenses.json"},
 	}
 });

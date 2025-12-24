@@ -5,7 +5,7 @@
 </script>
 
 <footer class="container" style={style}>
-    <p><a href={resolve("/license.json")}>サードパーティライセンス</a></p>
+    <p><a href={resolve("/licenses")}>サードパーティライセンス</a></p>
 </footer>
 
 <style>
