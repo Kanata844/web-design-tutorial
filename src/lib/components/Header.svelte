@@ -19,6 +19,7 @@
         box-shadow: 0px 4px 4px gray;
         position: sticky;
         top: 0;
+        width: 100%;
     }
     .header-background{
         box-shadow: 0px 2px 2px gray;
@@ -27,7 +28,6 @@
         display: flex;
         justify-content: center;
         align-items: top;
-        width: 100%;
         height: 65px;
     }
     .title a{

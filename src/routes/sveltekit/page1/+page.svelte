@@ -1,10 +1,10 @@
 <script>
-    import Body from "$lib/components/Body.svelte";
-    import Header from "$lib/components/Header.svelte";
     import Text from "./Text.svelte";
 
     import {menuList} from "../menuList.ts";
+    import Frame from "$lib/components/Frame.svelte";
 </script>
 
-<Header/>
-<Body menuList={menuList}><Text/></Body>
+<Frame menuList={menuList}>
+    <Text/>
+</Frame>
