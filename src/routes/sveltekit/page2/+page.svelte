@@ -1,11 +1,10 @@
 <script>
     import Frame from "$lib/components/Frame.svelte";
-    import Footer from "$lib/components/Footer.svelte";
-    import Header from "$lib/components/Header.svelte";
 
     import {menuList} from "../menuList.ts";
+    import Text from "./Text.svelte";
 </script>
 
-<Header/>
-<Frame menuList={menuList}></Frame>
-<Footer/>
+<Frame menuList={menuList}>
+    <Text/>
+</Frame>

@@ -2,11 +2,11 @@ import { resolve } from "$app/paths";
 
 export const menuList = [
     {
-        title: "ページ1",
+        title: "プロジェクト作成",
         url: resolve("/sveltekit/page1"),
     },
     {
-        title: "ページ2",
+        title: "GitHub Pagesにデプロイする",
         url: resolve("/sveltekit/page2"),
     }
 ]
