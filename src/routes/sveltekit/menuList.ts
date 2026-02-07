@@ -8,5 +8,9 @@ export const menuList = [
     {
         title: "GitHub Pagesにデプロイする",
         url: resolve("/sveltekit/page2"),
+    },
+    {
+        title: "Cloudflare Pagesにデプロイする",
+        url: resolve("/sveltekit/page3")
     }
 ]
