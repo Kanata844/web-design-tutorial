@@ -9,6 +9,8 @@
     import picture3 from "./picture3.png";
     import picture4 from "./picture4.jpg";
     import picture5 from "./picture5.png";
+    import picture6 from "./picture6.jpg";
+    import picture7 from "./picture7.jpg";
 </script>
 
 <svelte:head>
@@ -51,7 +53,7 @@ export default config;`}/>
     <Highlight style="max-width: 600px; padding-bottom: 10px;" language={bash} code={'git add --all'}/>
     <Highlight style="max-width: 600px; padding-bottom: 10px;" language={bash} code={'git commit -m "何らかのコミットメッセージ"'}/>
     <Highlight style="max-width: 600px; padding-bottom: 10px;" language={bash} code={'git push origin HEAD'}/>
-    <h2>2.Cloudflare Pagesにデプロイする</h2>
+    <h2 style="padding-bottom: 10px;">2.Cloudflare Pagesにデプロイする</h2>
     <p style="padding-bottom: 10px;">アカウントを作った後、この画面が表示されている人は、赤丸をつけた始めるの部分を押してください。</p>
     <img src={picture1} alt="cloudflareの画面1" style="width:95%; max-width:700px; height:auto; margin-right:10px; border: 1px solid #33140e;"/>
     <p style="padding-bottom: 10px;">そうでない人は、トップページの右上にある追加のボタンから、Pagesを選択してください。</p>
@@ -62,6 +64,14 @@ export default config;`}/>
     <img src={picture4} alt="cloudflareの画面4" style="width:95%; max-width:700px; height:auto; margin-right:10px; border: 1px solid #33140e;"/>
     <p style="padding-bottom: 10px;">そしたら、次の画面で下の画像のように入力して、保存してデプロイするを押してください。プロジェクト名はそのままで大丈夫だと思います。フレームワークプリセットでSvelteKitを選べば、下の2つは勝手に入力されます。</p>
     <img src={picture5} alt="cloudflareの画面5" style="width:95%; max-width:700px; height:auto; margin-right:10px; border: 1px solid #33140e;"/>
+    <p style="padding-bottom: 10px;">うまく行けば、https://(プロジェクト名).pages.dev/で作ったサイトが公開されていると思います。</p>
+    <p style="padding-bottom: 10px;">※自分でやってみたら、Error: Failed to publish your Function. Got error: Unknown internal error occurred.と言われてしまいました、デプロイを再試行してみたら治りました。</p>
+    <h2 style="padding-bottom: 10px;">3.Cloudflare Pagesの設定</h2>
+    <p style="padding-bottom: 10px;">このままでも大丈夫ではありますが、大人数で開発するときに月500回のビルド制限に引っかかるのが心配な人は、mainブランチ以外にpushしたときにプレビューがデプロイされるのを止めておきましょう。</p>
+    <p style="padding-bottom: 10px;">プロジェクトの設定画面を開いて、ブランチコントロールの鉛筆ボタンを押しましょう。</p>
+    <img src={picture6} alt="cloudflareの画面5" style="width:95%; max-width:700px; height:auto; margin-right:10px; border: 1px solid #33140e;"/>
+    <p style="padding-bottom: 10px;">プレビューブランチをなしにすれば、main以外のブランチにpushしたときにデプロイされなくなります。</p>
+    <img src={picture7} alt="cloudflareの画面5" style="width:95%; max-width:700px; height:auto; margin-right:10px; border: 1px solid #33140e;"/>
 </div>
 <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/page2")} nextTitle="次へ"/>
 
