@@ -72,8 +72,8 @@ export default config;`}/>
     <img src={picture6} alt="cloudflareの画面5" style="width:95%; max-width:700px; height:auto; margin-right:10px; border: 1px solid #33140e;"/>
     <p style="padding-bottom: 10px;">プレビューブランチをなしにすれば、main以外のブランチにpushしたときにデプロイされなくなります。</p>
     <img src={picture7} alt="cloudflareの画面5" style="width:95%; max-width:700px; height:auto; margin-right:10px; border: 1px solid #33140e;"/>
+    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/page2")} nextTitle="次へ" nextURL={resolve("/sveltekit/page4")}/>
 </div>
-<Pager prevTitle="前へ" prevURL={resolve("/sveltekit/page2")} nextTitle="次へ"/>
 
 <style>
     *{

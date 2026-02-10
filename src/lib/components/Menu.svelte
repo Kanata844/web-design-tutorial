@@ -16,6 +16,9 @@
 </div>
 
 <style>
+    p{
+        margin: 2px;
+    }
     .menuDisplayed{
         left: 0px;
     }
