@@ -16,6 +16,14 @@
 </div>
 
 <style>
+    p{
+        margin: 5px;
+    }
+    a{
+        color: dimgray;
+        font-weight: bold;
+        text-decoration: none;
+    }
     .menuDisplayed{
         left: 0px;
     }
@@ -30,6 +38,7 @@
         width: 250px;
         height: 100%;
         transition: 0.5s ease-out;
+        z-index: 20;
     }
     .list{
         width: 100%;
@@ -38,6 +47,7 @@
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         box-shadow: 2px 2px 4px gray;
+        background-color: white;
     }
     .button{
         width: 30px;
