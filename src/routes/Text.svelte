@@ -12,12 +12,13 @@
     <p style:margin-bottom="30px">同じく無料で静的なWebサイトをホスティングしてくれますが、こちらは帯域幅にもリクエストの数にも制限はありません。どれだけ沢山の人に見られても大丈夫です。すごいですね。注意点としては、<strong>ビルドの回数が月500回まで</strong>なことです。一人で普通に開発する分には問題ないですが、大人数でGitHubにプッシュしまくってたら割とすぐに使い切っちゃうと思うので、何らかの対策が必要です。</p>
     <h2 style:margin-bottom="10px">本編</h2>
     <p style:margin-bottom="15px">以下の3つの方法を紹介します。下に行けば行くほど内容は高度になりますが、順番はないので好きなものを選んでください。</p>
-    <h2><a href={resolve("/directly/page1")}>1.GitHubのソースコードを直接配信</a></h2>
-    <h2><a href={resolve("/vite-ts/page1")}>2.ViteでTypeScriptで開発したものを配信</a></h2>
-    <h2 style:margin-bottom="15px"><a href={resolve("/sveltekit/page1")}>3.SvelteKitを用いて開発したものを配信</a></h2>
-    <p>1.GitHubのソースコードを直接配信では、難しいことは一切せずにHTMLとCSSとJavaScriptで書いたページをとりあえず配信できればいいというときにおすすめです。が、解説することは少ないので1ページで終わると思います。</p>
-    <p>2.ViteでTypeScriptで開発したものを配信では、少しレベルアップして便利に開発したいときにおすすめです。TypeScriptとは書いていますが、JavaScriptでも同じ事ができます。</p>
-    <p>3.SvelteKitを用いて開発したものを配信では、最近勢いのあるフレームワークSvelteKitを使い、便利に開発していきます。新しく覚えることも多いですが、実務に一番近いですし便利な機能も多いので、チャレンジしてみて損はありません。このサイト自体もこの方法で作られています。</p>
+    <h2><a href={resolve("/vite-ts/page1")}>1.ViteでTypeScriptで開発(準備中)</a></h2>
+    <h2><a href={resolve("/astro/page1")}>2.Astroで開発(準備中)</a></h2>
+    <h2 style:margin-bottom="15px"><a href={resolve("/sveltekit/page1")}>3.SvelteKitを用いて開発</a></h2>
+    <p>1.ViteでTypeScriptで開発では、Viteというものを使って便利に開発していきます。TypeScriptとは書いていますが、JavaScriptでも同じ事ができます。</p>
+    <p>2.Astroで開発では、Astroというフレームワークを使って、便利に開発していきます。これはWebアプリというよりはWebサイトを作るのに非常に適しているフレームワークとなっており、手軽で便利だと思います。</p>
+    <p style:margin-bottom=20px>3.SvelteKitを用いて開発では、最近勢いのあるフレームワークSvelteKitを使い、便利に開発していきます。Webアプリを作りたいときにもってこいの、人気のフレームワークです。このサイト自体もこの方法で作られています。(SvelteKitのいいところはあまり活かせていませんが……)</p>
+    <p>また、おまけとして、<a href="/directly">生のHTMLとCSSとJavaScriptだけで作ったページをCloudflare Pagesで公開する方法</a>も紹介しておきます。</p>
 </div>
 
 <style>

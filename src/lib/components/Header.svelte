@@ -8,8 +8,8 @@
         <p class="title"><a href={resolve("/")}>作ったサイトを公開してみよう</a></p>
     </div>
     <div class="navigation-background">
-            <p><a href={resolve("/directly/page1")}>直接配信</a></p>
-            <p><a href={resolve("/vite-ts/page1")}>Vite + TS</a></p>
+            <p><a href={resolve("/vite-ts/page1")}>Vite + TS(準備中)</a></p>
+            <p><a href={resolve("/astro/page1")}>Astro(準備中)</a></p>
             <p><a href={resolve("/sveltekit/page1")}>SvelteKit</a></p>
     </div>
 </header>
