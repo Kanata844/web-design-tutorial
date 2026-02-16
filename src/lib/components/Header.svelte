@@ -20,6 +20,7 @@
         position: sticky;
         top: 0;
         width: 100%;
+        z-index: 21;
     }
     .header-background{
         box-shadow: 0px 2px 2px gray;
