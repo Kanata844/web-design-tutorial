@@ -2,6 +2,7 @@
     import { resolve } from "$app/paths";
 
 </script>
+
 <div>
     <h1 style:margin-bottom="10px">このサイトの概要</h1>
     <p style:margin-bottom="30px">このサイトは、Webページをデザインし、それを公開する方法を見ていきます。ut.code(); LearnではRenderにデプロイする方法が紹介されていましたが、ここではGitHub Pagesで公開する方法と、Cloudflare Pagesで公開する方法を見ていくんじゃないかと思います。ut.code(); Learnで学んだことを活かして、ホームページ作成にチャレンジしてみましょう！</p>

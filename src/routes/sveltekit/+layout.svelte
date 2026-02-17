@@ -7,7 +7,9 @@
 </script>
 
 <svelte:head>
-  {@html a11yDark}
+    {@html a11yDark}
+    <title>うぇぶでざ！SvelteKit編</title>
+    <description>ここでは、SvelteKitの使い方を見ていきます。</description>
 </svelte:head>
 
 <Frame menuList={menuList}>

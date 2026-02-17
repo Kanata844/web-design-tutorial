@@ -1,11 +1,12 @@
 <script>
     import { resolve } from "$app/paths";
-
+    import title from "$lib/assets/title.png";
 </script>
 <header>
     <div class="header-background">
         <p class="utcode-learn"><a href="https://learn.utcode.net">ut.code(); Learnへ戻る</a></p>
         <p class="title"><a href={resolve("/")}>作ったサイトを公開してみよう</a></p>
+        <img class="title-img" src={title} alt="タイトル画像"/>
     </div>
     <div class="navigation-background">
             <p><a href={resolve("/vite-ts/page1")}>Vite + TS(準備中)</a></p>
@@ -37,6 +38,12 @@
         font-family: sans-serif;
         font-weight: bold;
         text-decoration: none;
+    }
+    .title-img{
+        position: absolute;
+        height: 80%;
+        right: 20px;
+        bottom: 0px;
     }
     .utcode-learn{
         margin: 5px;
@@ -70,6 +77,9 @@
     @media screen and (max-width: 767px){
         .title a{
             font-size: 20px;
+        }
+        .title-img{
+            height: 60%;
         }
     }
 </style>

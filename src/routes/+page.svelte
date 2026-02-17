@@ -5,6 +5,11 @@
     import Text from "./Text.svelte";
 </script>
 
+<svelte:head>
+    <title>うぇぶでざ！</title>
+    <description>このサイトは、Webページをデザインし、それを公開する方法を見ていきます。</description>
+</svelte:head>
+
 <Frame>
     <Text/>
 </Frame>
