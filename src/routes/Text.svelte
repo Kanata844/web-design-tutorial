@@ -14,7 +14,7 @@
     <p style:margin-bottom="15px">以下の3つの方法を紹介します。下に行けば行くほど内容は高度になりますが、順番はないので好きなものを選んでください。</p>
     <h2><a href={resolve("/vite-ts/page1")}>1.ViteでTypeScriptで開発(準備中)</a></h2>
     <h2><a href={resolve("/astro/page1")}>2.Astroで開発(準備中)</a></h2>
-    <h2 style:margin-bottom="15px"><a href={resolve("/sveltekit/page1")}>3.SvelteKitを用いて開発</a></h2>
+    <h2 style:margin-bottom="15px"><a href={resolve("/sveltekit/1-create-project")}>3.SvelteKitを用いて開発</a></h2>
     <p>1.ViteでTypeScriptで開発では、Viteというものを使って便利に開発していきます。TypeScriptとは書いていますが、JavaScriptでも同じ事ができます。</p>
     <p>2.Astroで開発では、Astroというフレームワークを使って、便利に開発していきます。これはWebアプリというよりはWebサイトを作るのに非常に適しているフレームワークとなっており、手軽で便利だと思います。</p>
     <p style:margin-bottom=20px>3.SvelteKitを用いて開発では、最近勢いのあるフレームワークSvelteKitを使い、便利に開発していきます。Webアプリを作りたいときにもってこいの、人気のフレームワークです。このサイト自体もこの方法で作られています。(SvelteKitのいいところはあまり活かせていませんが……)</p>
