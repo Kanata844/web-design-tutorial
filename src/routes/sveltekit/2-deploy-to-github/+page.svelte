@@ -1,18 +1,13 @@
 <script>
     import { Highlight } from "svelte-highlight";
     import { bash, javascript, typescript, yaml } from "svelte-highlight/languages";
-    import { a11yDark } from "svelte-highlight/styles";
-
+    
     import picture1 from "./picture1.jpg";
     import picture2 from "./picture2.png";
     import picture3 from "./picture3.jpg";
     import Pager from "$lib/components/Pager.svelte";
     import { resolve } from "$app/paths";
 </script>
-
-<svelte:head>
-  {@html a11yDark}
-</svelte:head>
 
 <div>
     <h1 style="padding-bottom: 10px;">GitHub Pagesにデプロイする</h1>
@@ -21,9 +16,9 @@
     <p>GitHubのリポジトリ名が(ユーザー名).github.ioとなっており、リポジトリがpublic担っていることを確認してください。リポジトリ名に関しては、違うものでもなんとかなりますが、Webサイトのページ遷移が少々めんどくさくなります。やり方は各自調べてください。</p>
     <h2 style="padding-bottom: 10px;">1.adapter-staticの使用</h2>
     <p style="padding-bottom: 20px;">まずは、以下のコマンドを実行してadapter-staticをインストールしてください。</p>
-    <Highlight style="max-width: 600px; padding-bottom: 10px;" language={bash} code={'npm i -D @sveltejs/adapter-static'}/>
+    <Highlight style="max-width: 1000px; padding-bottom: 10px;" language={bash} code={'npm i -D @sveltejs/adapter-static'}/>
     <p style="padding-bottom: 20px;">できたら、プロジェクトのルートにあるsvelte.config.jsの内容を以下のものに書き換えます。</p>
-    <Highlight style="max-width: 600px; padding-bottom: 10px;" language={javascript} code={`import adapter from '@sveltejs/adapter-static';
+    <Highlight style="max-width: 1000px; padding-bottom: 10px;" language={javascript} code={`import adapter from '@sveltejs/adapter-static';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -39,14 +34,14 @@ const config = {
 
 export default config;`}/>
     <p style="padding-bottom: 20px;">そしたら、src/routes/+layout.jsというファイルを追加し、以下の1行を書きます。</p>
-    <Highlight style="max-width: 600px; padding-bottom: 10px;" language={javascript} code={"export const prerender = true;"}/>
+    <Highlight style="max-width: 1000px; padding-bottom: 10px;" language={javascript} code={"export const prerender = true;"}/>
     <h2 style="padding-bottom: 10px;">2.GitHub Pagesのworkflowを追加</h2>
     <p style="padding-bottom: 20px;">ここまでやったら、GitHubでこのプロジェクトのリポジトリを開き、一番右のSettingsの欄からPagesを選択し、sourceをDeploy from a branchからGitHub Actionsに変更します。</p>
     <img src={picture1} alt="githubの画面1" style="width:95%; max-width:700px; height:auto; margin-right:10px"/>
     <p style="padding-bottom: 20px;">できたら、Build and deploymentのcreate your ownを選択します。</p>
     <img src={picture2} alt="githubの画面2" style="width:95%; max-width:700px; height:auto; margin-right:10px"/>
     <p>そしたら、出てきた画面にこのコードを貼り付けてください。ファイルの名前はdeploy.ymlにでもしといてください。(.ymlなら何でもいいと思います。)できたら、右上のCommit changes…を押してください。</p>
-    <Highlight style="max-width: 800px; padding-bottom: 10px;" language={yaml} code={`name: Deploy to GitHub Pages
+    <Highlight style="max-width: 1000px; padding-bottom: 10px;" language={yaml} code={`name: Deploy to GitHub Pages
 
 on:
   push:
@@ -104,12 +99,12 @@ jobs:
         uses: actions/deploy-pages@v4`}/>
     <img src={picture3} alt="githubの画面3" style="width:95%; max-width:700px; height:auto; margin-right:10px"/>
     <p>そしたら、ローカルのターミナルに戻って、以下のコマンドを順番に打って、リモートの変更をローカルに反映させ、更にローカルの変更もリモートに反映させます。</p>
-    <Highlight style="max-width: 600px; padding-bottom: 10px;" language={bash} code={'git pull origin'}/>
-    <Highlight style="max-width: 600px; padding-bottom: 10px;" language={bash} code={'git add --all'}/>
-    <Highlight style="max-width: 600px; padding-bottom: 10px;" language={bash} code={'git commit -m "何らかのコミットメッセージ"'}/>
-    <Highlight style="max-width: 600px; padding-bottom: 10px;" language={bash} code={'git push origin HEAD'}/>
+    <Highlight style="max-width: 1000px; padding-bottom: 10px;" language={bash} code={'git pull origin'}/>
+    <Highlight style="max-width: 1000px; padding-bottom: 10px;" language={bash} code={'git add --all'}/>
+    <Highlight style="max-width: 1000px; padding-bottom: 10px;" language={bash} code={'git commit -m "何らかのコミットメッセージ"'}/>
+    <Highlight style="max-width: 1000px; padding-bottom: 10px;" language={bash} code={'git push origin HEAD'}/>
     <p>うまく行っていれば、サイトがhttps://(ユーザー名).github.ioで公開されていると思います。</p>
-    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/page1")} nextTitle="次へ" nextURL={resolve("/sveltekit/page3")}/>
+    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/1-create-project")} nextTitle="次へ" nextURL={resolve("/sveltekit/3-deploy-to-cloudflare")}/>
 </div>
 
 <style>

@@ -2,14 +2,9 @@
     import { typescript } from "svelte-highlight/languages";
     import { Highlight } from "svelte-highlight";
     import { vbscriptHtml } from "svelte-highlight/languages";
-    import { a11yDark } from "svelte-highlight/styles";
     import Pager from "$lib/components/Pager.svelte";
     import { resolve } from "$app/paths";
 </script>
-
-<svelte:head>
-  {@html a11yDark}
-</svelte:head>
 
 <div>
     <h1>コンポーネントを利用する</h1>
@@ -100,7 +95,7 @@
         color: green;    /*クラスの名前が被っているが、問題ない*/
     }
 </style>`}/>
-    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/page5")} nextTitle="次へ" nextURL={resolve("/sveltekit/page7")}/>
+    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/5-state")} nextTitle="次へ" nextURL={resolve("/sveltekit/7-each-if")}/>
 </div>
 
 <style>

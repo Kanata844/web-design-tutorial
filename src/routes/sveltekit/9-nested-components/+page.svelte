@@ -2,15 +2,10 @@
     import { typescript } from "svelte-highlight/languages";
     import { Highlight } from "svelte-highlight";
     import { vbscriptHtml } from "svelte-highlight/languages";
-    import { a11yDark } from "svelte-highlight/styles";
     import Pager from "$lib/components/Pager.svelte";
     import { resolve } from "$app/paths";
     import { highlightAttachment } from "$lib/utils";
 </script>
-
-<svelte:head>
-  {@html a11yDark}
-</svelte:head>
 
 <div>
     <h1>自作コンポーネントの入れ子</h1>
@@ -39,7 +34,7 @@
 
 {@render children()}
 `}/>
-    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/page8")} nextTitle="次へ" nextURL={resolve("/sveltekit/page10")}/>
+    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/8-routing-images")} nextTitle="次へ" nextURL={resolve("/sveltekit/10-tips")}/>
 </div>
 
 <style>

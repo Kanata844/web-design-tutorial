@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { page } from "$app/state";
+
     interface MenuListItem {
     	title: string;
     	url: string;
@@ -9,7 +11,7 @@
 <div class="container {menuDisplayed? "menuDisplayed": "menuHidden"}">
     <div class="list">
         {#each menuList as item}
-        <p><a href={item.url}>{item.title}</a></p>
+            <p><a href={item.url} style={item.url===page.url.pathname? "color: tomato;": ""}>{item.title}</a></p>
         {/each}
     </div>
     <button class="button" onclick={()=>{menuDisplayed = !menuDisplayed}}>{menuDisplayed? "<": ">"}</button>

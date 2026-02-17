@@ -2,14 +2,9 @@
     import { typescript } from "svelte-highlight/languages";
     import { Highlight } from "svelte-highlight";
     import { vbscriptHtml } from "svelte-highlight/languages";
-    import { a11yDark } from "svelte-highlight/styles";
     import Pager from "$lib/components/Pager.svelte";
     import { resolve } from "$app/paths";
 </script>
-
-<svelte:head>
-  {@html a11yDark}
-</svelte:head>
 
 <div>
     <h1>ページ遷移、画像の使い方</h1>
@@ -36,7 +31,7 @@
     <p>そうしたら、+page.svelteのHTMLの部分に、imgタグを以下のように追加してください。</p>
     <Highlight style="max-width: 1000px; padding-bottom: 10px;" language={vbscriptHtml} code={`<img src={picture} alt="(画像の説明)"/>`}/>
     <p>画像が表示できたと思います。複数のページで共通に使う画像は、src/lib/assetsに置いて、$lib/assets/(ファイル名)からインポートするのがよいでしょう。</p>
-    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/page7")} nextTitle="次へ" nextURL={resolve("/sveltekit/page9")}/>
+    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/7-each-if")} nextTitle="次へ" nextURL={resolve("/sveltekit/9-nested-components")}/>
 </div>
 
 <style>

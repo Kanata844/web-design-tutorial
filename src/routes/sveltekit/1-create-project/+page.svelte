@@ -1,7 +1,6 @@
 <script lang="ts">
     import Highlight from "svelte-highlight";
     import bash from "svelte-highlight/languages/bash";
-    import a11yDark from "svelte-highlight/styles/a11y-dark";
     import picture1 from "./picture1.jpg";
     import picture2 from "./picture2.jpg";
     import picture3 from "./picture3.png";
@@ -9,13 +8,7 @@
     import Pager from "$lib/components/Pager.svelte";
     import { resolve } from "$app/paths";
     import { highlightAttachment } from "$lib/utils";
-    
-    
 </script>
-
-<svelte:head>
-  {@html a11yDark}
-</svelte:head>
 
 <div>
     <h1>プロジェクト作成</h1>
@@ -29,22 +22,22 @@
     <p>プロジェクトが作成できたら、プロジェクトの画面を開き、git@github.com:(ユーザー名)/(リポジトリ名).gitという文字列を(クリップボードに)コピーしてください。</p>
     <img src={picture3} alt="githubの画像3" style="width:95%; max-width:700px; height:auto; margin-right:10px"/>
     <p>(以下、Windowsの人はWSLを使っている前提です。)コピーできたら、リポジトリをクローンしたい場所をターミナルで開き、次のコマンドを実行します。</p>
-    <Highlight style="max-width: 500px" language={bash} code={"git clone git@github.com:(ユーザー名)/(リポジトリ名).git"}/>
+    <Highlight style="max-width: 1000px" language={bash} code={"git clone git@github.com:(ユーザー名)/(リポジトリ名).git"}/>
     <p>そしたら、クローンしたディレクトリに移動してください。(<code {@attach highlightAttachment}>cd (リポジトリ名)</code>で移動できます。)</p>
     <p>つぎに、その場所で次のコマンドを実行しプロジェクトを作成してください。聞かれた質問は、とくに希望がなければデフォルトのままエンターを押して進んで構いません。</p>
-    <Highlight style="max-width: 500px" language={bash} code={"npx sv create"}/>
+    <Highlight style="max-width: 1000px" language={bash} code={"npx sv create"}/>
     <img src={picture4} alt="githubの画面4" style="width:95%; max-width:700px; height:auto; margin-right:10px"/>
     <p>これができたら、次のコマンドを実行してテンプレートが出来上がっていることを確認しましょう。</p>
-    <Highlight style="max-width: 500px" language={bash} code={"npm run dev"}/>
+    <Highlight style="max-width: 1000px" language={bash} code={"npm run dev"}/>
     <p><a href="http://localhost:5173/">http://localhost:5173/</a>をブラウザで開くか、出てきたポップアップのOpen in browserボタンを押すかすると開けると思います。</p>
     <p>とりあえず動くことがわかったので、GitHubにpushしてみましょう。まず、次のコマンドで変更をaddします。</p>
-    <Highlight style="max-width: 500px" language={bash} code={"git add --all"}/>
+    <Highlight style="max-width: 1000px" language={bash} code={"git add --all"}/>
     <p>そしたら、変更をcommitします。</p>
-    <Highlight style="max-width: 500px" language={bash} code={'git commit -m "何らかのコミットメッセージ"'}/>
+    <Highlight style="max-width: 1000px" language={bash} code={'git commit -m "何らかのコミットメッセージ"'}/>
     <p>ここまで来たら、最後にリモートにpushして変更を反映させます。</p>
-    <Highlight style="max-width: 500px" language={bash} code={"git push origin HEAD"}/>
+    <Highlight style="max-width: 1000px" language={bash} code={"git push origin HEAD"}/>
     <p>GitHubを見ると、プロジェクトの内容が表示されていると思います。</p>
-    <Pager prevTitle="トップに戻る" prevURL={resolve("/")} nextTitle="次へ" nextURL={resolve("/sveltekit/page2")}/>
+    <Pager prevTitle="トップに戻る" prevURL={resolve("/")} nextTitle="次へ" nextURL={resolve("/sveltekit/2-deploy-to-github")}/>
 </div>
 
 <style>

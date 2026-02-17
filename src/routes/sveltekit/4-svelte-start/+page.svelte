@@ -2,14 +2,9 @@
     import { typescript } from "svelte-highlight/languages";
     import { Highlight } from "svelte-highlight";
     import { vbscriptHtml } from "svelte-highlight/languages";
-    import { a11yDark } from "svelte-highlight/styles";
     import Pager from "$lib/components/Pager.svelte";
     import { resolve } from "$app/paths";
 </script>
-
-<svelte:head>
-  {@html a11yDark}
-</svelte:head>
 
 <div>
     <h1>Svelteことはじめ</h1>
@@ -49,7 +44,7 @@
     <p>さいごにもう一つ、{"\{\}"}内はスクリプトとして扱われるため、以下のようなボタンもしっかり動作します。やってみてください。</p>
     <Highlight style="max-width: 1000px; padding-bottom: 10px;" language={vbscriptHtml} code={`<button onclick={()=>{alert("Hello!!!")}}>ボタン2</button>`}/>
     <p>※ちなみに()=>{"\{\}"}というのはアロー関数式と言って、普通の関数とだいたい同じです。(少し違うらしいです。)</p>
-    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/page3")} nextTitle="次へ" nextURL={resolve("/sveltekit/page5")}/>
+    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/3-deploy-to-cloudflare")} nextTitle="次へ" nextURL={resolve("/sveltekit/5-state")}/>
 </div>
 
 <style>

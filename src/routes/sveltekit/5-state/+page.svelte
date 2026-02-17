@@ -2,14 +2,9 @@
     import { typescript } from "svelte-highlight/languages";
     import { Highlight } from "svelte-highlight";
     import { vbscriptHtml } from "svelte-highlight/languages";
-    import { a11yDark } from "svelte-highlight/styles";
     import Pager from "$lib/components/Pager.svelte";
     import { resolve } from "$app/paths";
 </script>
-
-<svelte:head>
-  {@html a11yDark}
-</svelte:head>
 
 <div>
     <h1>stateを使ってみよう</h1>
@@ -55,7 +50,7 @@
 <button onclick={()=>{size = "small";}}>小さくする</button>
 <button onclick={()=>{size = "big";}}>大きくする</button>`}/>
     <p>クラスを変更することで、大きさを変更することができたと思います。</p>
-    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/page4")} nextTitle="次へ" nextURL={resolve("/sveltekit/page6")}/>
+    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/4-svelte-start")} nextTitle="次へ" nextURL={resolve("/sveltekit/6-components")}/>
 </div>
 
 <style>

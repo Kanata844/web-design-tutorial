@@ -2,14 +2,9 @@
     import { typescript } from "svelte-highlight/languages";
     import { Highlight } from "svelte-highlight";
     import { vbscriptHtml } from "svelte-highlight/languages";
-    import { a11yDark } from "svelte-highlight/styles";
     import Pager from "$lib/components/Pager.svelte";
     import { resolve } from "$app/paths";
 </script>
-
-<svelte:head>
-  {@html a11yDark}
-</svelte:head>
 
 <div>
     <h1>Eachブロック、Ifブロック</h1>
@@ -77,7 +72,7 @@
     <p>10回を超えました!すごい!</p>
 {/if}`}/>
     <p>10回を超えたら褒めてもらえるようになったと思います。</p>
-    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/page6")} nextTitle="次へ" nextURL={resolve("/sveltekit/page8")}/>
+    <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/6-components")} nextTitle="次へ" nextURL={resolve("/sveltekit/8-routing-images")}/>
 </div>
 
 <style>
