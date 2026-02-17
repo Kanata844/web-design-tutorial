@@ -9,7 +9,7 @@
 <svelte:head>
     {@html a11yDark}
     <title>うぇぶでざ！SvelteKit編</title>
-    <description>ここでは、SvelteKitの使い方を見ていきます。</description>
+    <meta name="description" content="ここでは、SvelteKitの使い方を見ていきます。">
 </svelte:head>
 
 <Frame menuList={menuList}>
