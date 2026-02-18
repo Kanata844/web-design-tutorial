@@ -79,7 +79,7 @@
             font-size: 20px;
         }
         .title-img{
-            height: 60%;
+            height: 55%;
         }
     }
 </style>
