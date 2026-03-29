@@ -66,6 +66,30 @@
     <p>次に、Intersection Observer APIについてです。ちょっとこれはここで説明していると長くなるのでだいぶん端折ります。先程のように書いて@attachすると、attachした要素が画面に入る、もしくは画面から出るタイミングで、(entries)=>{"{……}"}(先程書いてもらった関数)が呼ばれます。entriesは変化があった要素の配列で、普通は長さは1です。配列の中身の型は<a href="https://developer.mozilla.org/ja/docs/Web/API/IntersectionObserverEntry">IntersectionObserverEntry型</a>で、isIntersectingは、画面内にあればtrue、なければfalseになります。ちょっと自分でもなに書いてるかよく分かんなくなってきたんですけど、とりあえず上の例のdisplayedを好きなstateに置き換えてもらえば、コピペで動くと思うので、頑張ってください。もっとカスタマイズしたいとなったときは、頑張ってググって理解するかAIに聞くかしてください。</p>
     <p>最後に、三項演算子ですが、{"{条件式? 値1: 値2}"}と書くと、条件式がtrueなら値1、falseなら値2として扱われるものです。ここでは、{'class={displayed? "displayed": "hidden"}'}としたので、displayedがtrueならclassはdisplayed、falseならhiddenとなります。</p>
     <p>基本的に、先程作った<strong>Attachmentは使いまわしはできない</strong>と思っていてください。stateを複数個扱いたいなら、その数だけAttachmentを作ってください。</p>
+    <h2>おまけ</h2>
+    <p>ですが、たくさんものを動かしたい場合は、いちいちstateを書くのも大変でしょう。ということで、自動的に画面に入ったことを検知するコンポーネントを作ってみたので、使ってみたければ使ってみてください。</p>
+    <Highlight style="max-width: 1000px; padding-bottom: 10px;" language={vbscriptHtml} code={`<script lang="ts">
+    import type { Snippet } from "svelte";
+    import type { Attachment } from "svelte/attachments";
+    let {class: className = "", style = "", classDisplayed = "", classHidden = "", styleDisplayed = "", styleHidden = "", options = {}, forceHide = false, children}: {class?: string, style?: string, classDisplayed?: string, classHidden?: string, styleDisplayed?: string, styleHidden?: string, options?:{root?: Element, rootMargin?: string, scrollMargin?: string, threshold?: number}, forceHide?: boolean, children?: Snippet} = $props();
+
+    let displayed = $state(false);
+
+    const attachment: Attachment = (element) =>{
+    new IntersectionObserver((entries) => {
+        for(let i = 0; i < entries.length; i++){
+            displayed = entries[i].isIntersecting;
+        }
+    }, options).observe(element);
+}
+<\/script>
+
+<div class="{className} {((!forceHide) && displayed)? classDisplayed: classHidden}" style="{style} {((!forceHide) && displayed)? styleDisplayed: styleHidden}" {@attach attachment}>
+    {#if children}
+        {@render children()}
+    {/if}
+</div>`}/>
+    <p>classDisplayed、styleDisplayedの部分に表示されているときのクラスとスタイル属性を、classHidden、styleHiddenの部分に隠されているときのクラスとスタイル属性を入れてください。ただし、クラスは:global(クラス名)で指定してください(スコープの関係)。何言ってるかわからないかもしれませんが頑張って調べてほしいです。画面に入っているけれども入っていない扱いにしたい場合は、forceHideにtrueを指定してください。</p>
     <Pager prevTitle="前へ" prevURL={resolve("/sveltekit/9-nested-components")}/>
 </div>
 
